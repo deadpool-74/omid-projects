@@ -1,0 +1,577 @@
+/* ------------------------------
+         Global Customize
+------------------------------ */
+/* --- Body Styles --- */
+body {
+    font-family: 'Vazir', Vazir, Tahoma, Arial, sans-serif !important;
+    direction: rtl;
+    text-align: right;
+    position: relative;
+}
+/* --- Link Styles --- */
+a {
+    color: #e38cb7;
+    text-decoration: none !important;
+}
+a:hover ,
+a:focus {
+    color: #d6619c;
+    text-decoration: none !important;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+/* --- Head Text Styles --- */
+h2 {
+    font-size: 45px;
+    font-weight: 300;
+    color: #633991;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+h3 {
+    font-size: 33px;
+    font-weight: 500;
+    color: #633991;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #633991;
+}
+h5 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #633991;
+    margin-bottom: 0.7rem;
+}
+/* --- Background Styles --- */
+.bg-gradient {
+    background-image: linear-gradient(135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+}
+.light-bg {
+    background-color: #faf6fb;
+}
+/* --- Paragraph Styles ---*/
+.tagline {
+    color: #ffb8f6;
+    font-size: 23px;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+p {
+    color: #959094;
+}
+p.lead {
+    color: #e38cb7;
+    margin-bottom: 2rem;
+}
+/* --- Font Styles --- */
+.light-font {
+    font-weight: 300;
+}
+/* --- Section Styles --- */
+.section {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.section-title small {
+    color: #998a9b;
+}
+/* --- Box Icon Styles --- */
+.box-icon {
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+    padding: 18px;
+    background: #fff;
+    width: 85px;
+    border-radius: 50%;
+}
+/* --- Text Styles --- */
+.text-primary {
+    color: #e38cb7 !important;
+}
+/* --- Btn Styles ---*/
+.btn {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0.37rem 1.35rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.btn-group>.btn-lg,
+.btn-lg {
+    padding: 0.8rem 1rem !important;
+    font-size: 15px !important;
+}
+.btn-outline-light:hover {
+    color: #d6619c;
+}
+.btn-light {
+    background-color: #fff;
+    color: #633991;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    margin: 0.5rem;
+}
+.btn-primary {
+    background: linear-gradient(122deg, #e54595 0%, #fd378e 100%);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+    font-weight: 500;
+    border: 0;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    background: linear-gradient(122deg, #fd378e 0%, #e54595 100%);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* ------------------------------
+             Navbar
+------------------------------ */
+.nav-menu {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+.nav-menu.is-scrolling {
+    padding: 0;
+}
+.nav-menu.is-scrolling ,
+.nav-menu.menu-is-open {
+    background-color: rgb(74,13,143);
+    background-image: linear-gradient(135deg,rgb(74,13,143) 0% , rgb(250,42,143) 100%);
+    box-shadow: 0 5px 23px 0 rgba(0,0,0,0.1);
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .nav-item .nav-link {
+        font-size: 14px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        position: relative;
+    }
+    .navbar-expand-lg .nav-item .nav-link.active:after {
+        content: "";
+        border-bottom: 2px solid #cd99d4;
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 5px;
+    }
+}
+
+
+/* ------------------------------
+             Header
+------------------------------ */
+header {
+    padding-top: 100px;
+    text-align: center;
+    color: #fff;
+}
+.img-holder {
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .img-holder {
+        padding-bottom: 65%;
+    }
+}
+@media (min-width: 992px) {
+    .img-holder {
+        padding-bottom: 45%;
+    }
+}
+
+/* ------------------------------
+             Features
+------------------------------ */
+.card.features {
+    border: 0;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+.card.features:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    color: #fc73b4;
+    background: linear-gradient(to bottom , #9477b4 0% , #fc73b4 100%);
+}
+.card.features:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 30px 0px rgba(0,0,0,0.08);
+}
+.gradient-fill:before {
+    color: #fc73b4;
+    background: linear-gradient(to bottom , #9477b4 0% , #fc73b4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card-text {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ------------------------------
+          Search App
+------------------------------ */
+.box-icon.search {
+    margin: 0 auto 2rem;
+}
+.section-search {
+    text-align: center;
+}
+.perspective-photo {
+    position: relative;
+    z-index: -1;
+}
+@media (min-width: 768px) {
+    .box-icon.search {
+        margin:0 0 2rem;
+    }
+    .section-search {
+        text-align: right;
+    }
+}
+@media (min-width: 992px) {
+    .perspective-photo {
+        bottom: 120px;
+        margin-bottom: -7rem;
+    }
+}
+
+/* ------------------------------
+           Feature Tabs
+------------------------------ */
+.nav-tabs {
+    border-bottom: 0;
+}
+.nav-tabs .nav-item .nav-link,
+.nav-tabs .nav-item .nav-link:focus,
+.nav-tabs .nav-item .nav-link:hover {
+    padding: 1rem 1rem;
+    border-color: #faf6fb #fff #fff;
+    font-size: 17px;
+    color: #b5a4c8;
+    background: #f5eff7;
+}
+.nav-tabs .nav-item .nav-link.active {
+    background: #fff;
+    border-top-width: 3px;
+    border-color: #ce75b4 #faf6fb #fff;
+    color: #633991;
+}
+.tab-content {
+    background: #fff;
+    padding: 3rem;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,0.04);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.tab-content h3 {
+    margin-bottom: 0.5rem;
+}
+.tab-content p {
+    line-height: 1.8;
+}
+
+/* ------------------------------
+         Install App
+------------------------------ */
+.box-icon.mobile {
+    margin: 0 auto 2rem;
+}
+
+/* ------------------------------
+         Create & Share
+------------------------------ */
+.circle-icon {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 9px 32px 0 rgba(0,0,0,0.07);
+    color: #f5378e;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 90px;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+.ui-steps li {
+    padding: 15px 0;
+}
+.ui-steps li:not(:last-child) {
+    border-bottom: 1px solid #f8e3f0;
+}
+.ui-steps li:hover .circle-icon {
+    background: linear-gradient(122deg, #e6388e 0%, #fb378e 100%);
+    box-shadow: 0 9px 32px 0 rgba(0,0,0,0.09);
+    color: #fff;
+}
+
+/* ------------------------------
+            Comments
+------------------------------ */
+#comments .comment-single {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+#comments.owl-carousel .owl-item img.profile-img {
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 0 9px 32px 0 rgba(0,0,0,0.07);
+    margin: 2rem auto;
+}
+#comments .blockquote {
+    color: #7a767a;
+    font-weight: 300;
+}
+#comments .owl-next.disabled,
+#comments .owl-prev.disabled {
+    opacity: 0.5;
+}
+#comments .owl-next,
+#comments .owl-prev {
+    position: absolute;
+    top: 50%;
+    outline: none;
+}
+#comments .owl-next {
+    left: 0;
+}
+#comments .owl-prev {
+    right: 0;
+}
+
+/* ------------------------------
+          Image Gallery
+------------------------------ */
+#img-gallery .owl-item {
+    box-shadow: 0 9px 32px 0 rgba(0,0,0,0.07);
+    transform: scale(0.8);
+    transition: all 0.3s ease-in;
+}
+#img-gallery .owl-item.center {
+    transform: scale(1);
+}
+#img-gallery .owl-dots {
+    margin-top: 60px;
+    text-align: center;
+}
+#img-gallery .owl-dots .owl-dot {
+    background: #e7d9eb;
+    width: 35px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    transition: all 0.3s ease-in;
+    outline: none;
+}
+#img-gallery .owl-dots .owl-dot:hover {
+    background: #ff487e;
+}
+#img-gallery .owl-dots .owl-dot.active {
+    box-shadow: 0 9px 32px 0 rgba(0,0,0,0.07);
+    background: #ff487e;
+    width: 15px;
+    height: 15px;
+}
+#img-gallery img.screen {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ------------------------------
+            Panels
+------------------------------ */
+.card.pricing {
+    border: 1px solid #f1eef1;
+}
+.card.pricing .card-head {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+.card.pricing .card-head .price {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    color: #633991;
+}
+.card.pricing .card-head .price sub {
+    bottom: 0;
+    font-size: 50%;
+}
+.card.pricing .list-group {
+    border: 0;
+}
+.card.pricing .list-group-item {
+    border: 0;
+    color: #959094;
+    text-align: center;
+    padding: 1rem 1.25rem;
+}
+.card.pricing .list-group-item del {
+    opacity: 0.5;
+}
+.card.pricing .card-body {
+    padding: 1.75rem;
+}
+.card.pricing.popular {
+    box-shadow: 0 9px 50px 0 rgba(36,7,31,0.1);
+    border-top-width: 3px;
+    border-color: #ce75b4 #faf6fb #fff;
+    color: #633991;
+}
+
+@media (max-width: 991px) {
+    .card-deck {
+        flex-direction: column;
+    }
+    .card-deck .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ------------------------------
+          Download App
+------------------------------ */
+.download-app {
+    text-align: center;
+    color: #fff;
+}
+.download-app .box-icon {
+    margin: 0 auto 2rem;
+    transform: scale(0.9);
+}
+.download-app h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.download-app .tagline {
+    font-size: 1rem;
+    max-width: 650px;
+}
+
+/* ------------------------------
+           Contact Us
+------------------------------ */
+.social-icons a {
+    background-image: linear-gradient(135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f4c9e2;
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.05);
+    margin: 0 0.3rem;
+    transition: all 0.3s ease;
+}
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* ------------------------------
+             Footer
+------------------------------ */
+.footer-information {
+    font-size: 12px;
+}
+.footer-information a:hover {
+    text-decoration: none;
+}
+
+/* ------------------------------
+        Scroll To Top Button
+------------------------------ */
+#scrollTop {
+    background: #fd79a8;
+    padding: 13px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.05);
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+#scrollTop:hover {
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.15);
+    background: #ed79a8;
+}
+
+/* ------------------------------
+             Loading
+------------------------------ */
+#preLoader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74,13,143);
+    background-image: linear-gradient(135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content {
+    display: none;
+}
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}

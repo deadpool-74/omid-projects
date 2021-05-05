@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title -->
+    <title>Project_1</title>
+    <!-- BootStrap Links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <!-- Font Link -->
+    <link rel="stylesheet" href="css/vazir.css">
+    <!-- Customize StyleSheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light navbar-expand-md p-0 sticky-top bg-light shadow">
+    <div class="d-flex align-items-center">
+        <a href="#" class="navbar-brand px-4 py-3 m-0 bg-light h3">پنل مدیریت استارشاپ</a>
+        <!-- Sidebar Button -->
+        <ion-icon class="py-3 px-4" name="menu" style="cursor:pointer;width: 24px;height: 24px"
+                  data-toggle="collapse" data-target="#sidebar">
+        </ion-icon>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav pr-1">
+            <li class="nav-item active">
+                <a href="#" class="nav-link">داشبورد</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">اعضا</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">تنظیمات</a>
+            </li>
+        </ul>
+        <div class="ml-3 mr-auto">
+            <button type="button" class="btn btn-sm btn-success">
+                ایمیل های جدید <span class="badge badge-light pt-2">7</span>
+            </button>
+            <button type="button" class="btn btn-sm btn-primary">
+                نظرات جدید <span class="badge badge-light pt-2">3</span>
+            </button>
+            <button type="button" class="btn btn-sm btn-danger">خروج</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Main(Nav Menu & Content) -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-12 col-md-2 text-light bg-dark collapse show" id="sidebar">
+            <div class="py-3 pr-2">منوی اصلی</div>
+            <ul class="nav flex-column pr-3">
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="albums-outline"></ion-icon>
+                        <a href="#" class="nav-link my-1" href="#">داشبورد</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <a href="#" class="nav-link w-100 d-flex align-items-center justify-content-between collapsed"
+                           data-toggle="collapse" data-target="#submenu_1">
+                            <p class="m-0">مقالات</p>
+                            <ion-icon class="chevron-back" name="chevron-back"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="collapse" id="submenu_1">
+                        <ul class="nav flex-column pr-3">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">مشاهده همه</a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#"
+                                   class="nav-link w-100 d-flex align-items-center justify-content-between collapsed"
+                                   data-toggle="collapse" data-target="#submenu_1_sub">
+                                    <p class="m-0">ارسال مقاله</p>
+                                    <ion-icon class="chevron-back" name="chevron-back"></ion-icon>
+                                </a>
+                                <div class="collapse" id="submenu_1_sub">
+                                    <ul class="nav flex-column pr-4">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">مقاله کوتاه</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">مقاله بلند</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                        <a href="#" class="nav-link" href="#">دوره ها</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="py-3 pr-2">متفرقه</div>
+            <ul class="nav flex-column pr-3">
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <a href="#" class="nav-link my-1" href="#">اعضا</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <a href="#" class="nav-link" href="#">نظرات</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        <a class="nav-link" href="#">تنظیمات</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Content -->
+        <div class="col-12 col-md-10 bg-light mr-md-auto p-4" id="main">
+            <!-- Charts -->
+            <div class="card-deck">
+                <!-- registerUserChart -->
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">
+                        <h4>63770</h4>
+                        <p class="card-text blockquote-footer text-white">تعداد اعضای ثبت نام شده</p>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="register-user" class="w-100 h-100"></canvas>
+                    </div>
+                </div>
+                <!-- commentChart -->
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        <h4>22760</h4>
+                        <p class="card-text blockquote-footer text-white">تعداد نظرات</p>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="comment" class="w-100 h-100"></canvas>
+                    </div>
+                </div>
+                <!-- shopUserChart -->
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">
+                        <h4>9500</h4>
+                        <p class="card-text blockquote-footer text-white">تعداد خریدهای انجام شده</p>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="shop-user" class="w-100 h-100"></canvas>
+                    </div>
+                </div>
+                <!-- approveCommentChart -->
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                        <h4>42300</h4>
+                        <p class="card-text blockquote-footer text-white">تعداد نظرات تایید شده</p>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="approve-comment" class="w-100 h-100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard -->
+            <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap border-bottom pb-3 my-3">
+                <h1 class="h3">داشبورد</h1>
+                <div class="btn-toolbar">
+                    <div class="btn-group ml-2">
+                        <button class="btn btn-sm btn-outline-secondary">اشتراک گذاری</button>
+                        <button class="btn btn-sm btn-outline-secondary">خروجی گرفتن</button>
+                    </div>
+                    <div class="btn btn-sm btn-outline-secondary dropdown-toggle">این هفته</div>
+                </div>
+            </div>
+            <!-- visitorChart -->
+            <div class="card">
+                <div class="card-header">
+                    <h5>آمار بازدیدکنندگان</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="visitor" class="w-100 h-100"></canvas>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="text-center col-md-3">
+                            <h5>همه بازدیدها</h5>
+                            <p>25680 بازدید (40%)</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="text-center col-md-3">
+                            <h5>بازدیدهای یکتا</h5>
+                            <p>15460 بازدید (25%)</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="text-center col-md-3">
+                            <h5>صفحات بازدید شده</h5>
+                            <p>79500 بازدید (80%)</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="text-center col-md-3">
+                            <h5>نرخ پرش</h5>
+                            <p>36400 بازدید (43%)</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" style="width: 43%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Table -->
+            <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap border-bottom pb-3 my-4">
+                <h1 class="h3">آخرین مقالات</h1>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th>عنوان مقاله</th>
+                            <th>تعداد نظرات</th>
+                            <th>مقدار بازدید</th>
+                            <th>تنظیمات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>5</td>
+                            <td>33</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>7</td>
+                            <td>26</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>15</td>
+                            <td>46</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>8</td>
+                            <td>23</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>6</td>
+                            <td>43</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>5</td>
+                            <td>33</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>7</td>
+                            <td>26</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>15</td>
+                            <td>46</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>8</td>
+                            <td>23</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI و UX چه تفاوت های با هم دارند؟</td>
+                            <td>6</td>
+                            <td>43</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-primary">ویرایش</button>
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery & Bootstrap Script Links -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<!-- Icon Link Link -->
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<!-- Chart JS Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<!-- Customize Script Link -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
